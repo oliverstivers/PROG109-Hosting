@@ -37,6 +37,7 @@ img {
 
 body {
     background-image: url("http://3.bp.blogspot.com/-aNRb0w9Uu2E/Uk0w1v9lXjI/AAAAAAAAHrM/RipxfZqlQQ4/s1600/Texture-Backgrounds-Wallpaper-HD.jpg");
+    
 }
 
 #clear {
@@ -47,12 +48,18 @@ body {
     border: solid 1px;
     padding: 10px;
     margin: 10px;
+    p{
+        margin-left: 50%;
+    }
+    clear: both;
+    background-color: lightyellow;
+    text-align: center;
     
 }
 
 #container {
-    margin-top: 20%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-right: 25%;
     margin-bottom: 5%;
 }
