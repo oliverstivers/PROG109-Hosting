@@ -1,0 +1,76 @@
+* {
+    font-family: Arial,
+    Verdana,
+    sans-serif;
+    
+    text-align: center;
+}
+
+
+body {
+    width: 90%;
+    margin: 0 auto;
+    background-image: url("src/ocean.jpg");
+    background-size: 120%;
+}
+
+#content {
+    overflow: auto;
+}
+
+#nav,
+#feature,
+#footer {
+    margin: 1%;
+}
+
+.column1,
+.column2,
+.column3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;
+}
+
+.column3 {
+    margin-right: 0%;
+}
+
+li {
+    display: inline;
+    padding: 0.5em;
+}
+
+#nav,
+#footer {
+    background-color: #efefef;
+    padding: 0.5em 0;
+}
+
+#feature,
+.article {
+    height: 10em;
+    margin-bottom: 1em;
+    background-color: #efefef;
+}
+
+#feature {
+    background-color: #c6573e;
+    background-image: url("src/flower.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: rgb(166, 202, 166);
+}
+
+.column1{
+    background-color: pink;
+}
+
+.column2{
+    background-color: orangered;
+}
+
+.column3{
+    background-color: rgb(248, 194, 0);
+}
