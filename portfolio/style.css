@@ -152,7 +152,7 @@ a:hover {
     white-space: pre-line;
 }
 
-#resume a{
+.resume a{
     margin-left: 0px;
     padding-left: 0px;
 }
