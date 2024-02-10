@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="description" content="Week 6 - BC - Rhombus">
+    <meta charset="utf-8">
+    <title>Artifact 3</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1>Oliver Stivers</h1>
+    <label>What is the size of Rhombus?</label><br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br>
+    <label>Choose color for Even position</label><br>
+    <select id="colorEven">
+        <option value="#03fc03">Green</option>
+        <option value="#000000">Black</option>
+        <option value="#cc1094">Pink</option>
+    </select><br>
+
+    <label>Choose color for Odd position</label><br>
+    <select id="colorOdd">
+        <option value="#fc6f03">Orange</option>
+        <option value="#0352fc">Blue</option>
+        <option value="#fc030f">Red</option>
+    </select>
+    <br>
+    <label>Choose symbol for Rhombus</label>
+    <select id="symbol">
+        <option value="&">&</option>
+        <option value="*">*</option>
+        <option value="O">O</option>
+    </select>
+    <br>
+    <button onclick="createRhombus(document.getElementById('rHeight').value,
+document.getElementById('colorEven').value,
+document.getElementById('colorOdd').value,
+document.getElementById('symbol').value);">Display Rhombus</button>
+    <div id="container">
+        <div id="leftSide">Rhombus</div>
+        <div id="rightSide"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
