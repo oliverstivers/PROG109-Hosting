@@ -20,7 +20,7 @@ function leftSide(pHeight, pColorEven, pColorOdd, pSymbol) {
         combinedHTML += "<p>";
         // Create spaces before symbols
         for (k = 0; k < pHeight - i - 1; k++) {
-            combinedHTML += "&nbsp;&nbsp;";
+            combinedHTML += "&nbsp;&nbsp;&nbsp;"; // Add an additional space
         }
         // Create each line on the Rhombus
         for (j = 0; j <= i; j++) {
@@ -35,15 +35,15 @@ function leftSide(pHeight, pColorEven, pColorOdd, pSymbol) {
         combinedHTML += "</p>";
     }
 
-    // Generate upper right corner
-    for (i = 0; i < pHeight; i++) {
+    // Generate lower left corner
+    for (i = pHeight; i > 0; i--) {
         combinedHTML += "<p>";
         // Create spaces before symbols
-        for (k = 0; k < i; k++) {
-            combinedHTML += "&nbsp;&nbsp;";
+        for (k = 0; k < pHeight - i; k++) {
+            combinedHTML += "&nbsp;&nbsp;&nbsp;"; // Add an additional space
         }
         // Create each line on the Rhombus
-        for (j = 0; j < pHeight - i; j++) {
+        for (j = 0; j < i; j++) {
             // Is the position even or odd so we change the color
             if (j % 2)
                 // even
@@ -57,6 +57,8 @@ function leftSide(pHeight, pColorEven, pColorOdd, pSymbol) {
 
     document.getElementById("leftSide").innerHTML = combinedHTML;
 }
+
+
 
 function rightSide(pHeight, pColorEven, pColorOdd, pSymbol) {
     var combinedHTML = "";
