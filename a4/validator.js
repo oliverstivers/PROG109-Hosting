@@ -1,5 +1,5 @@
 function isValid() {
-    if (firstName() && lastName() && email() && phone()
+    if (firstName() && lastName() && email() && phone() && username() && password() && address() && city() && state() && country() && zip()
     )
         return true;
     else
@@ -75,4 +75,107 @@ function email() {
         return true; //Or assign the value to a variable. For example validEmail = true
     }
 
+}
+
+function phone() {
+    var phone = document.getElementById("Phone").value;
+    var errorMessages = "";
+    if (isNaN(phone) || phone.length > 15 || phone === null || phone === "") {
+        errorMessages += "<p>Invalid phone number</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function username() {
+    var username = document.getElementById("Username").value;
+    var errorMessages = "";
+    if (username === null || username === "" || username.length > 12) {
+        errorMessages += "<p>Invalid username</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function password() {
+    var password = document.getElementById("Password").value;
+    var errorMessages = "";
+    if (password === null || password === "" || password.length > 7) {
+        errorMessages += "<p>Invalid password</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function address() {
+    var address = document.getElementById("Address").value;
+    var errorMessages = "";
+    if (address === null || address === "" || address.length > 50) {
+        errorMessages += "<p>Invalid address</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function city() {
+    var city = document.getElementById("City").value;
+    var errorMessages = "";
+    if (city === null || city === "" || city.length > 20) {
+        errorMessages += "<p>Invalid city</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function state() {
+    var state = document.getElementById("State").value;
+    var errorMessages = "";
+    if (state === null || state === "" || state.length > 2) {
+        errorMessages += "<p>Invalid state</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function country() {
+    var country = document.getElementById("Country").value;
+    var errorMessages = "";
+    if (country === null || country === "" || country.length > 20) {
+        errorMessages += "<p>Invalid country</p>";
+        document.getElementById("lname").innerHTML = errorMessages;
+    }
+
+    else
+        return true;
+}
+
+function zip(){
+    var country = document.getElementById("Country").value;
+    var zip = document.getElementById("Zip").value;
+    var errorMessages = "";
+
+    if(country == "US"){
+        if (zip === null || zip === "" || zip.length > 5) {
+            errorMessages += "<p>Invalid zip code</p>";
+            document.getElementById("lname").innerHTML = errorMessages;
+        }
+        else{
+            return true;
+        }
+    }
+    else{
+        return true;
+    }
 }
