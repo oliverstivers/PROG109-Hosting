@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <img id="img" src="src/img1.jpg" alt="img" width="800px">
+
+
+    </div>
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+
+
+
+    <script>
+        //Let's define our variables
+        i = 0;
+        myImages = ["src/img1.jpg", "src/img2.jpg", "src/img3.jpg", "src/img4.jpg", "src/img5.jpg"];
+
+        console.log(i);
+        let slideshowInterval;
+
+        function showImage() {
+            if (i < myImages.length) {
+                document.getElementById("img").src = myImages[i];
+            } else {
+                i = 0;
+                document.getElementById("img").src = myImages[i];
+            }
+        }
+
+        function nextImage() {
+            clearInterval(slideshowInterval); // Clear the interval when "Next" is clicked
+            i++;
+            if (i >= myImages.length) {
+                i = 0;
+            }
+            showImage();
+            slideshowInterval = setInterval(nextImage, 5000); // Restart the interval after image changes
+        }
+
+        function previousImage() {
+            clearInterval(slideshowInterval); // Clear the interval when "Previous" is clicked
+            i--;
+            if (i < 0) {
+                i = myImages.length - 1;
+            }
+            showImage();
+            slideshowInterval = setInterval(nextImage, 5000); // Restart the interval after image changes
+        }
+
+        slideshowInterval = setInterval(nextImage, 5000);
+
+
+
+    </script>
+</body>
+
+</html>
