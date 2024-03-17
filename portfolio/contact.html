@@ -27,6 +27,7 @@
                 <br>
                 <li><a href="thankyou.html">Thank you</a></li>
                 <li><a href="validation.html">Validation</a></li>
+                <li><a href="animation.html">Animation and Music</a></li>
 
             </ul>
         </div>
@@ -34,7 +35,7 @@
         <div id="content">
             <div id="text">
                 <h2>Contact me</h2>
-                <form action="thankyou.html" method="get" name="myContact",  onsubmit="isValid();">
+                <form action="thankyou.html" method="get" name="myContact" , onsubmit="isValid();">
                     <label for="name">Name</label><br>
                     <input type="text" id="name" name="name"><br>
                     <label for="email">Email</label><br>
@@ -46,6 +47,11 @@
             </div>
 
             <div class="clear"> </div>
+
+            <div class="warning" id="fname"></div>
+            <div class="warning" id="email"></div>
+
+            <div class="warning" id="submiterror"></div>
 
         </div>
 
