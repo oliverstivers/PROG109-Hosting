@@ -10,10 +10,12 @@
 
 <body>
     <div id="container">
-        <img id="img" src="src/img1.jpg" alt="img" width="800px">
+        <img id="img" src="src/img1.jpg" alt="img" width="800">
+
 
 
     </div>
+    <p id="description">A foggy landscape with trees and a river</p>
     <button onclick="previousImage()">Previous</button>
     <button onclick="nextImage()">Next</button>
 
@@ -23,6 +25,7 @@
         //Let's define our variables
         i = 0;
         myImages = ["src/img1.jpg", "src/img2.jpg", "src/img3.jpg", "src/img4.jpg", "src/img5.jpg"];
+        myDescriptions = ["A foggy landscape with trees and a river", "A purple sky with a sea and mountains", "A turquoise sky with snowy mountains", "Flowers and a sea, with moutains and a sunset in the background", "A sunrise in Yosemite"]
 
         console.log(i);
         let slideshowInterval;
@@ -30,9 +33,11 @@
         function showImage() {
             if (i < myImages.length) {
                 document.getElementById("img").src = myImages[i];
+                document.getElementById("description").innerHTML = myDescriptions[i];
             } else {
                 i = 0;
                 document.getElementById("img").src = myImages[i];
+                document.getElementById("description").innerHTML = myDescriptions[i];
             }
         }
 
